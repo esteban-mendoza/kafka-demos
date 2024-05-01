@@ -11,11 +11,10 @@ import org.slf4j.LoggerFactory;
 import java.util.Properties;
 
 /**
- * Kafka Producer with Callback. This class sends 10 batches of 30 messages each to a Kafka topic
- * with a wait of 300 ms between each message.
- *
- * This producer uses the default partitioner to distribute the messages across the partitions.
- * This is the Strictly Uniform Sticky Partitioner, according to <a href="https://cwiki.apache.org/confluence/display/KAFKA/KIP-794%3A+Strictly+Uniform+Sticky+Partitioner#KIP794:StrictlyUniformStickyPartitioner-NewDefaultPartitioner(allsettingsaredefault)">KIP-794</a>.
+ * <p>Kafka Producer with Callback. This class sends 10 batches of 30 messages each to a Kafka topic
+ *  with a wait of 300 ms between each message.</p>
+ * <p>This producer uses the default partitioner to distribute the messages across the partitions.
+ * This is the Strictly Uniform Sticky Partitioner, according to <a href="https://cwiki.apache.org/confluence/display/KAFKA/KIP-794%3A+Strictly+Uniform+Sticky+Partitioner#KIP794:StrictlyUniformStickyPartitioner-NewDefaultPartitioner(allsettingsaredefault)">KIP-794</a></p>
  */
 public class ProducerDemoWithCallback {
 
