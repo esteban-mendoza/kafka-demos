@@ -1,20 +1,25 @@
 package com.verbalia.demos.kafka;
 
+import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
 
-public class ProducerDemo {
+/**
+ * Kafka Producer with keys.
+ */
+public class ProducerDemoKeys {
 
-    private final static String CLASS_NAME = ProducerDemo.class.getSimpleName();
+    private final static String CLASS_NAME = ProducerDemoKeys.class.getSimpleName();
     private final static Logger logger = LoggerFactory.getLogger(CLASS_NAME);
 
     public static void main(String[] args) {
-        logger.info("Hello, Kafka Producer!");
+        logger.info("Hello, I'm a Kafka Producer!");
 
         // Properties
         Properties properties = new Properties();
@@ -32,12 +37,31 @@ public class ProducerDemo {
         // Producer
         try (KafkaProducer<String, String> producer = new KafkaProducer<>(properties)) {
 
-            // Producer record
-            ProducerRecord<String, String> record =
-                    new ProducerRecord<>("third_topic", "Hello, from the Java producer!");
+            for (int i = 0; i < 2; i++) {
+                for (int j = 0; j < 10; j++) {
 
-            // Send data. Asynchronous operation
-            producer.send(record);
+                    String topic = "third_topic";
+                    String key = "id_" + j;
+                    String value = "Message " + j + " from " + CLASS_NAME;
+
+                    // Producer record
+                    ProducerRecord<String, String> record = new ProducerRecord<>(topic, key, value);
+
+                    // Send data. Asynchronous operation
+                    producer.send(record, new Callback() {
+                        @Override
+                        public void onCompletion(RecordMetadata metadata, Exception exception) {
+                            // executes whenever a record is successfully sent or an exception is thrown
+                            if (exception == null) {
+                                logger.info("Key: {} | Partition: {}", key, metadata.partition());
+                            } else {
+                                logger.error("Error while producing: {}", exception.getMessage());
+                            }
+                        }
+                    });
+                }
+                Thread.sleep(500);
+            }
 
             // Make producer send all buffered records and blocks until all records have been sent.
             // Synchronous operation
