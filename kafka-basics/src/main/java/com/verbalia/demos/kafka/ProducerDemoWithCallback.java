@@ -71,7 +71,7 @@ public class ProducerDemoWithCallback {
                     try {
                         Thread.sleep(300);
                     } catch (InterruptedException e) {
-                        logger.error("Error: {}", e.getMessage());
+                        logger.error("Interrupted error: {}", e.getMessage());
                     }
 
                 }
