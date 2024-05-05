@@ -37,6 +37,8 @@ public class ConsumerDemoCooperative {
         properties.put("key.deserializer", StringDeserializer.class.getName());
         properties.put("value.deserializer", StringDeserializer.class.getName());
 
+        // Group ID allows multiple consumers to work together in a consumer group
+        // and to resume where they left off if they are disconnected.
         properties.put("group.id", groupId);
 
         // Auto offset reset. Possible values: none, earliest, latest.

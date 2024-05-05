@@ -40,7 +40,7 @@ public class ConsumerDemo {
         properties.put("group.id", groupId);
 
         // Auto offset reset. Possible values: none, earliest, latest.
-        // If none: the consumer will throw an exception if there is no offset saved.
+        // If none: the consumer will throw an exception if there are no offsets saved.
         // If earliest: the consumer will read from the beginning of the topic.
         // If latest: the consumer will read only new messages.
         properties.put("auto.offset.reset", "earliest");
