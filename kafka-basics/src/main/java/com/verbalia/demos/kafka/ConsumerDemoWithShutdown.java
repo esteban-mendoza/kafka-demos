@@ -29,7 +29,10 @@ public class ConsumerDemoWithShutdown {
         properties.put("bootstrap.servers", "https://ample-moray-5293-us1-kafka.upstash.io:9092");
         properties.put("sasl.mechanism", "SCRAM-SHA-256");
         properties.put("security.protocol", "SASL_SSL");
-        properties.put("sasl.jaas.config", "org.apache.kafka.common.security.scram.ScramLoginModule required username=\"YW1wbGUtbW9yYXktNTI5MySu4_iP0mTwlaaR_3b7JzL4KMLscP89l3mRLJan5uk\" password=\"ZWMzOWFkNjEtZTFhZi00ZTg3LWFhNmUtNDNiNTkyNTdiNWYy\";");
+
+        String username = System.getenv("KAFKA_USERNAME");
+        String password = System.getenv("KAFKA_PASSWORD");
+        properties.put("sasl.jaas.config", "org.apache.kafka.common.security.scram.ScramLoginModule required username=\"" + username + "\" password=\"" + password + "\";");
 
         // Consumer  properties
         properties.put("key.deserializer", StringDeserializer.class.getName());

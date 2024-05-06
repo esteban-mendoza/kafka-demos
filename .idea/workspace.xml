@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3bc1a4a-d5be-4540-90d0-94a0214ff7bd" name="Changes" comment="Consumers">
-      <change afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/com/verbalia/demos/kafka/ProducerDemoBlocked.java" afterDir="false" />
+    <list default="true" id="d3bc1a4a-d5be-4540-90d0-94a0214ff7bd" name="Changes" comment="Improve comments and errors">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/com/verbalia/demos/kafka/ConsumerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/com/verbalia/demos/kafka/ConsumerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/com/verbalia/demos/kafka/ConsumerDemoCooperative.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/com/verbalia/demos/kafka/ConsumerDemoCooperative.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/com/verbalia/demos/kafka/ConsumerDemoWithShutdown.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/com/verbalia/demos/kafka/ConsumerDemoWithShutdown.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/com/verbalia/demos/kafka/ProducerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/com/verbalia/demos/kafka/ProducerDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/com/verbalia/demos/kafka/ProducerDemoBlocked.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/com/verbalia/demos/kafka/ProducerDemoBlocked.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/com/verbalia/demos/kafka/ProducerDemoKeys.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/com/verbalia/demos/kafka/ProducerDemoKeys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka-basics/src/main/java/com/verbalia/demos/kafka/ProducerDemoWithCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/kafka-basics/src/main/java/com/verbalia/demos/kafka/ProducerDemoWithCallback.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +61,7 @@
     &quot;Gradle.kafka-course:kafka-basics [:kafka-basics:ProducerDemo.main()].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
